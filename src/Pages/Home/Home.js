@@ -15,10 +15,10 @@ const Home = () => {
         <HeaderTabs />
         <SearchBar />
       </View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
+        <RestaurantItem />
       </ScrollView>
-      <RestaurantItem />
     </SafeAreaView>
   );
 };
