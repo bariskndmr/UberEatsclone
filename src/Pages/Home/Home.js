@@ -31,6 +31,7 @@ const Home = () => {
 
   useEffect(() => {
     getRestaurantFromYelp();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [city]);
 
   return (
