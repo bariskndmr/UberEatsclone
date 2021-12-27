@@ -4,36 +4,6 @@ import {View, Image, TouchableOpacity, Text} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Styles from './RestaurantItems.style';
 
-export const localRestaurants = [
-  {
-    name: 'Beachside Bar',
-    image_url:
-      'https://static.onecms.io/wp-content/uploads/sites/9/2020/04/24/ppp-why-wont-anyone-rescue-restaurants-FT-BLOG0420.jpg',
-    categories: ['Cafe', 'Bar'],
-    price: '$$',
-    reviews: 1244,
-    rating: 4.5,
-  },
-  {
-    name: 'Benihana',
-    image_url:
-      'https://static.onecms.io/wp-content/uploads/sites/9/2020/04/24/ppp-why-wont-anyone-rescue-restaurants-FT-BLOG0420.jpg',
-    categories: ['Cafe', 'Bar'],
-    price: '$$',
-    reviews: 1244,
-    rating: 3.7,
-  },
-  {
-    name: "India's Grill",
-    image_url:
-      'https://static.onecms.io/wp-content/uploads/sites/9/2020/04/24/ppp-why-wont-anyone-rescue-restaurants-FT-BLOG0420.jpg',
-    categories: ['Indian', 'Bar'],
-    price: '$$',
-    reviews: 700,
-    rating: 4.9,
-  },
-];
-
 const RestaurantItems = props => {
   return (
     <TouchableOpacity activeOpacity={1}>
