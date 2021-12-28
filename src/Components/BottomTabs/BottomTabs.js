@@ -19,8 +19,8 @@ export default BottomTabs;
 
 const Icon = props => {
   return (
-    <TouchableOpacity style={Styles.innerContainer}>
-      <FontAwesome5 name={props.name} size={22} />
+    <TouchableOpacity>
+      <FontAwesome5 style={Styles.innerContainer} name={props.name} size={25} />
       <Text>{props.text}</Text>
     </TouchableOpacity>
   );

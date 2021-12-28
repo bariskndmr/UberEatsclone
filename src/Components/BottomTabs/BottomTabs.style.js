@@ -4,11 +4,11 @@ export default StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginHorizontal: 15,
+    marginHorizontal: 20,
     marginTop: 15,
   },
   innerContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignSelf: 'center',
+    marginBottom: 3,
   },
 });
