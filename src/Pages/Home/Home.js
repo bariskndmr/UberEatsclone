@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {SafeAreaView, ScrollView, View} from 'react-native';
 
-import Categories from '../../Components/Categories';
-import HeaderTabs from '../../Components/HeaderTabs';
-import RestaurantItems from '../../Components/RestauranItems';
-import {localRestaurants} from '../../Components/RestauranItems/RestaurantItems';
-import SearchBar from '../../Components/SearchBar';
+import BottomTabs from 'Components/BottomTabs/BottomTabs';
+import Categories from 'Components/Categories';
+import HeaderTabs from 'Components/HeaderTabs';
+import RestaurantItems from 'Components/RestauranItems';
+import SearchBar from 'Components/SearchBar';
 
 import Styles from './Home.style';
 
@@ -52,6 +52,7 @@ const Home = () => {
         <Categories />
         <RestaurantItems restaurantData={restaurantData} />
       </ScrollView>
+      <BottomTabs />
     </SafeAreaView>
   );
 };
