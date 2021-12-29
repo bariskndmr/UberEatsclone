@@ -2,16 +2,28 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 import Styles from './About.style';
 
-const image =
-  'https://cdn.loveandlemons.com/wp-content/uploads/2021/04/green-salad.jpg';
-const title = 'Farmhouse Kitchen Thai Cuisine';
-const description = 'Thai - Comfort Food - $$ - 💳 - 4 ⭐️ (2913+)';
+const yelpRestaurantInfo = {
+  name: 'Farmhouse Kitchen Thai Cuisine',
+  image:
+    'https://cdn.loveandlemons.com/wp-content/uploads/2021/04/green-salad.jpg',
+  price: '$$',
+  reviews: '1500',
+  rating: 4.5,
+  categories: [{title: 'Thai'}, {title: 'Comfort Food'}, {title: 'Coffee'}],
+};
 
 const About = props => {
+  const {name, image, price, reviews, rating, categories} = props.route.params;
+
+  const formattedCategories = categories.map(cat => cat.title).join(' · ');
+
+  const description = `${formattedCategories} ${
+    price ? ' · ' + price : ''
+  } · 💳 · ${rating} ⭐️ (${reviews}+) `;
   return (
     <View style={Styles.container}>
       <RestaurantImage image={image} />
-      <RestaurantTitle title={title} />
+      <RestaurantTitle name={name} />
       <RestaurantDescription description={description} />
     </View>
   );
@@ -24,7 +36,7 @@ const RestaurantImage = props => {
 };
 
 const RestaurantTitle = props => {
-  return <Text style={Styles.title}>{props.title}</Text>;
+  return <Text style={Styles.title}>{props.name}</Text>;
 };
 
 const RestaurantDescription = props => {

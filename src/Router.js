@@ -6,21 +6,20 @@ import RestaurantDetail from './Pages/RestaurantDetail';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-const Stack = createNativeStackNavigator();
-
 const Router = () => {
+  const Stack = createNativeStackNavigator();
+
+  const screenOptions = {headerShown: false};
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        initialRouteName="HomePage"
+        screenOptions={screenOptions}>
+        <Stack.Screen name="HomePage" component={Home} />
         <Stack.Screen
-          options={{headerShown: false}}
           name="RestaurantDetailPage"
           component={RestaurantDetail}
-        />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="HomePage"
-          component={Home}
         />
       </Stack.Navigator>
     </NavigationContainer>

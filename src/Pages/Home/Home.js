@@ -12,9 +12,9 @@ import Styles from './Home.style';
 const YELP_API_KEY =
   'JVmyMb_ZSu-y89u2GsVJWob66t-JehD6fFxeHACRpfo5xd516hR4643dJj1cZC1sWHwCyB5Gn9zlOaw9twDVpZX-TxW6SYP8aQGyPvSVUp2FbZ98eC5jRnjIG37JYXYx';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [restaurantData, setRestaurantData] = useState([]);
-  const [city, setCity] = useState('Seattle');
+  const [city, setCity] = useState('SantaMonica');
   const [activeTab, setActiveTab] = useState('Delivery');
 
   const getRestaurantFromYelp = () => {
@@ -50,7 +50,10 @@ const Home = () => {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItems restaurantData={restaurantData} />
+        <RestaurantItems
+          navigation={navigation}
+          restaurantData={restaurantData}
+        />
       </ScrollView>
       <BottomTabs />
     </SafeAreaView>
