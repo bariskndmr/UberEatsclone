@@ -16,9 +16,9 @@
           ".json"
         ],
         "alias": {
-          "navigation": "./src/Pages",
+          "pages": "./src/Pages",
           "components": "./src/Components",
-          "assets": "./Assets"
+          "assets": "./src/Assets"
         }
       }
     ]

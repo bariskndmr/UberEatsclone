@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {SafeAreaView, ScrollView, View} from 'react-native';
 
-import BottomTabs from 'Components/BottomTabs/BottomTabs';
-import Categories from 'Components/Categories';
-import HeaderTabs from 'Components/HeaderTabs';
-import RestaurantItems from 'Components/RestauranItems';
-import SearchBar from 'Components/SearchBar';
+import BottomTabs from 'Components/Home/BottomTabs';
+import Categories from 'Components/Home/Categories';
+import HeaderTabs from 'Components/Home/HeaderTabs';
+import RestaurantItems from 'Components/Home/RestauranItems';
+import SearchBar from 'Components/Home/SearchBar';
 
 import Styles from './Home.style';
 
