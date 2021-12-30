@@ -2,16 +2,6 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 import Styles from './About.style';
 
-const yelpRestaurantInfo = {
-  name: 'Farmhouse Kitchen Thai Cuisine',
-  image:
-    'https://cdn.loveandlemons.com/wp-content/uploads/2021/04/green-salad.jpg',
-  price: '$$',
-  reviews: '1500',
-  rating: 4.5,
-  categories: [{title: 'Thai'}, {title: 'Comfort Food'}, {title: 'Coffee'}],
-};
-
 const About = props => {
   const {name, image, price, reviews, rating, categories} = props.route.params;
 
